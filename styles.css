@@ -270,3 +270,108 @@ footer a {
         font-size: 40px;
     }
 }
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #ffffff;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    position: relative;
+    height: auto;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 1.5em; /* Adjust font size for mobile */
+}
+
+/* Section Styles */
+section {
+    margin: 100px auto 60px; /* Adjust spacing for mobile */
+    padding: 40px 20px; 
+    max-width: 90%; /* Limit width on mobile screens */
+    border-radius: 10px;
+}
+
+/* Footer Styles */
+footer {
+    display: flex;
+    flex-direction: column; /* Stack items on mobile */
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    z-index: 10;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+footer a {
+    font-size: 1.2em; /* Smaller icons on mobile */
+    color: white;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    .burger i {
+        font-size: 24px;
+        color: white; /* Adjust icon color */
+    }
+
+    nav ul li a {
+        font-size: 1em;
+        padding: 5px 10px;
+    }
+
+    section h2 {
+        font-size: 1.2em; /* Smaller heading */
+        margin-top: 20px;
+    }
+
+    section p {
+        font-size: 1em;
+    }
+
+    .nav-links {
+        width: 100%; /* Full width on mobile */
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    /* Footer adjustments */
+    footer {
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    footer a {
+        font-size: 1em;
+    }
+
+    /* Reduce padding and margin */
+    header, footer {
+        padding: 10px;
+    }
+}
