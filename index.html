@@ -315,7 +315,12 @@
 </footer>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    // Toggle heart letter visibility
+    function toggleHeart(element) {
+        element.classList.toggle("active");
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
         // Create stars in the background
         for (let i = 0; i < 100; i++) {
             let star = document.createElement("div");
@@ -337,11 +342,6 @@
                 setTimeout(() => emoji.classList.remove("show-emoji"), 1000);
             });
         });
-
-        // Toggle heart letter visibility
-        function toggleHeart(element) {
-            element.classList.toggle("active");
-        }
 
         // Smooth scroll to section on navigation click
         document.querySelectorAll('nav ul li a').forEach(anchor => {
