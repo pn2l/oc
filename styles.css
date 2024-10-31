@@ -285,3 +285,64 @@ footer a {
         color: #333;
     }
 }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+}
+
+/* Center align the header elements */
+h1 {
+    margin: 0;
+}
+
+/* Default nav link styles */
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+/* Burger menu hidden on larger screens */
+.burger {
+    display: none;
+}
+
+/* Media query for screens 768px and below */
+@media (max-width: 768px) {
+    /* Hide the default nav links and style the burger */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        padding: 10px;
+        width: 80%;
+        max-width: 200px;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Display nav links when active */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Style for the burger icon */
+    .burger {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+    }
+
+    /* Icon size and color */
+    .burger i {
+        font-size: 24px;
+        color: #333;
+    }
+}
